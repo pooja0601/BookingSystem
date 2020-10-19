@@ -1,9 +1,6 @@
-
 module.exports = function(app) {
-    app.post('/test/set-value', setValue);
+    app.post('/api/setValue', setValue);
 }
-
 function setValue( req, res){
-    console.log(req.body);
-    return { message: "got value"}
+    console.log("inside controller",req.body.value);
 }

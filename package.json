@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "cd backend && node server.js",
+    "client": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dev": "concurrently -n 'server,client' -c 'red,green' \"nodemon start\" \"npm run client\""
   },
   "private": true,
   "dependencies": {
@@ -19,7 +21,11 @@
     "@angular/platform-browser": "~10.1.6",
     "@angular/platform-browser-dynamic": "~10.1.6",
     "@angular/router": "^10.1.6",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.5",
     "rxjs": "~6.6.0",
+    "save": "^2.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },

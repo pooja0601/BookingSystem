@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {TestService} from '../../services/test.service';
 
@@ -8,15 +9,20 @@ import {TestService} from '../../services/test.service';
 })
 export class TestComponent implements OnInit {
 
-  constructor( public testService: TestService) { }
+  constructor( public testService: TestService,
+    
+    ) { }
 
   ngOnInit(): void {
-  }
+  } 
   
   getData(event){
     console.log(event.target.value);
     const value = event.target.value;
-    this.testService.setValue(value);
-  }
+
+    this.testService.saveValue(value);
+
+    
+  } 
 
 }

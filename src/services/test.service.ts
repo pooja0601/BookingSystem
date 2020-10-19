@@ -8,10 +8,12 @@ export class TestService {
 
   constructor( private http: HttpClient) { }
 
-  setValue(value){
+  saveValue(value){
     const givenValue = value;
-    this.http.post("/test/set-value", { value: givenValue }).subscribe(result=>{
+    this.http.post("/api/setValue", { value: givenValue }).subscribe(result=>{
       console.log(result);
     })
   }
+
+  
 }
