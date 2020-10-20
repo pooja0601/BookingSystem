@@ -7,8 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
-
 import { MatInputModule } from '@angular/material/input';
+import { MatGoogleMapsAutocompleteModule } from '@angular-material-extensions/google-maps-autocomplete';
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
   declarations: [
@@ -22,8 +24,15 @@ import { MatInputModule } from '@angular/material/input';
     AppRoutingModule, 
     HttpClientModule,
     MatInputModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'YOUR_KEY',
+      libraries: ['places']
+    }),
+    MatGoogleMapsAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+//https://www.npmjs.com/package/@angular-material-extensions/google-maps-autocomplete
