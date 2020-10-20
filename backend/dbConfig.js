@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/wikipedia', { useNewUrlParser: true }, function(){
+mongoose.connect('mongodb://localhost/bookingSystem', { useNewUrlParser: true }, function(){
 	console.log('mongodb connected')
 });
 
