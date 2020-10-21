@@ -8,8 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
 import { MatInputModule } from '@angular/material/input';
-import { MatGoogleMapsAutocompleteModule } from '@angular-material-extensions/google-maps-autocomplete';
-import { AgmCoreModule } from '@agm/core';
+import {GooglePlaceModule} from 'ngx-google-places-autocomplete';
 
 
 @NgModule({
@@ -24,11 +23,8 @@ import { AgmCoreModule } from '@agm/core';
     AppRoutingModule, 
     HttpClientModule,
     MatInputModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'YOUR_KEY',
-      libraries: ['places']
-    }),
-    MatGoogleMapsAutocompleteModule
+    GooglePlaceModule   
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

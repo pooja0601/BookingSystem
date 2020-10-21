@@ -1,21 +1,6 @@
-<p>auto-complete works!</p>
-
-<div class="container" fxLayout="column" fxLayoutAlign="center">
-
-    <div fxFlex>
-      <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
-        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
-      </agm-map>
-    </div>
-
-    <div fxFlex fxFlexAlign="center"
-         class="autocomplete-container"
-         [ngStyle.xs]="{'min-width.%': 100}"
-         [ngStyle.sm]="{'width.%': 70}">
-      <mat-google-maps-autocomplete (onAutocompleteSelected)="onAutocompleteSelected($event)"
-                                    (onLocationSelected)="onLocationSelected($event)"
-                                    (onGermanAddressMapped)="onGermanAddressMapped($event)">
-      </mat-google-maps-autocomplete>
-    </div>
-
-  </div>
+<h1>Hi</h1>
+<div class="container">
+  <h1>Simple Google Place</h1>
+  <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
+  <p> {{formattedAddress}}</p>
+</div>

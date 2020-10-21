@@ -13,8 +13,6 @@
   },
   "private": true,
   "dependencies": {
-    "@agm/core": "^3.0.0-beta.0",
-    "@angular-material-extensions/google-maps-autocomplete": "^5.0.0",
     "@angular/animations": "^10.1.6",
     "@angular/cdk": "^10.2.5",
     "@angular/common": "~10.1.6",
@@ -29,6 +27,7 @@
     "cors": "^2.8.5",
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.9",
+    "ngx-google-places-autocomplete": "^2.0.4",
     "nodemon": "^2.0.5",
     "rxjs": "~6.6.0",
     "save": "^2.4.0",

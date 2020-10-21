@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
+import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router'; 
 import { AppComponent } from './app.component';
@@ -9,6 +10,9 @@ const routes: Routes = [{
   path: '', component: HomeComponent,
 }, {
   path: 'test', component: TestComponent
+},
+{
+  path: 'location', component: AutoCompleteComponent
 }];
 
 
