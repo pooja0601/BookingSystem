@@ -1,1 +1,41 @@
-<p>add-event works!</p>
+<!-- <div class="container">
+  <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter event name</mat-label>
+      <input matInput placeholder="event name" formControlName="eventName" />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill">
+      <mat-label>Enter date</mat-label>
+      <input matInput placeholder="date" formControlName="date" />
+    </mat-form-field>
+  </form>
+</div> -->
+<div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Input</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label>Textarea</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+</div>
+
+<mat-form-field appearance="fill">
+  <mat-label>Both a label and a placeholder</mat-label>
+  <input matInput placeholder="Simple placeholder" />
+</mat-form-field>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Favorite food</mat-label>
+    <input matInput placeholder="Ex. Pizza" value="Sushi" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+</form>
