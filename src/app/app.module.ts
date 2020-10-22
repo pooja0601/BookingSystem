@@ -1,3 +1,4 @@
+import { AutocompleteComponent } from './google-places.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -6,9 +7,9 @@ import { TestComponent } from './test/test.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
 import { MatInputModule } from '@angular/material/input';
 import {GooglePlaceModule} from 'ngx-google-places-autocomplete';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,14 +17,16 @@ import {GooglePlaceModule} from 'ngx-google-places-autocomplete';
     AppComponent,
     TestComponent,
     HomeComponent,
-    AutoCompleteComponent
+    AutocompleteComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule,
     MatInputModule,
-    GooglePlaceModule   
+    GooglePlaceModule   ,
+    FormsModule
     
   ],
   providers: [],

@@ -1,4 +1,3 @@
-import { AutoCompleteComponent } from './auto-complete/auto-complete.component';
 import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router'; 
@@ -11,10 +10,8 @@ const routes: Routes = [{
 }, {
   path: 'test', component: TestComponent
 },
-{
-  path: 'location', component: AutoCompleteComponent
-}];
 
+]
 
 @NgModule({
   declarations: [
