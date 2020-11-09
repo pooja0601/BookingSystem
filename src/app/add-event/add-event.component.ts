@@ -9,6 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class AddEventComponent implements OnInit {
   eventForm: FormGroup;
 
+  
   constructor() {}
 
   ngOnInit(): void {
