@@ -11,7 +11,9 @@
     </mat-form-field>
   </form>
 </div> -->
-<div class="example-container">
+
+
+<!-- <div class="example-container">
   <mat-form-field appearance="fill">
     <mat-label>Input</mat-label>
     <input matInput />
@@ -53,4 +55,17 @@
 
 <mat-form-field>
   <input matInput type="datetime-local" placeholder="end date">
-</mat-form-field>
+</mat-form-field> -->
+
+<div class="container">
+<form [formGroup] = 'eventForm' (submit) = "submitEvent()">
+  <mat-form-field appearance="fill">
+    <mat-label>Input</mat-label>
+    <input formControlName= "eventName" required matInput />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="datetime-local" placeholder="start date" formControlName = "eventDate" required>
+  </mat-form-field>
+    <button>Submit</button>
+</form>
+</div>
