@@ -58,17 +58,19 @@
 </mat-form-field> -->
 
 <div class="container">
-<form [formGroup] = 'eventForm' (submit) = "submitEvent()">
-  <mat-form-field appearance="fill">
-    <mat-label>Input</mat-label>
-    <input formControlName= "eventName" required matInput />
+  <div class="form"> 
+    <form [formGroup] = 'eventForm' (submit) = "submitEvent()">
+      <mat-form-field class= "eventName"appearance="outline">
+      <mat-label>Event name</mat-label>
+      <input formControlName= "eventName" required matInput />
+      </mat-form-field>
+  <mat-form-field class="startDate">
+    <input matInput  type="datetime-local" placeholder="Start date" formControlName = "startDate" required>
   </mat-form-field>
-  <mat-form-field>
-    <input matInput type="datetime-local" placeholder="start date" formControlName = "startDate" required>
+  <mat-form-field class="endDate">
+    <input matInput  type="datetime-local" placeholder="End date" formControlName = "endDate" required>
   </mat-form-field>
-  <mat-form-field>
-    <input matInput type="datetime-local" placeholder="end date" formControlName = "endDate" required>
-  </mat-form-field>
-    <button>Submit</button>
+    <button class="submitBtn">Submit</button>
 </form>
+</div>
 </div>

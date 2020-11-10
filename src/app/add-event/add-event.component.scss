@@ -1,0 +1,32 @@
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.eventName {
+  width: 100%;
+}
+
+.startDate {
+  width: 49%;
+  padding-right: 1%;
+}
+.endDate {
+  width: 50%;
+}
+
+.submitBtn {
+  margin: 0;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
