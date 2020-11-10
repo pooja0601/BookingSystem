@@ -27,7 +27,8 @@ export class AddEventComponent implements OnInit {
 
     this.eventForm = new FormGroup({
       eventName :  new FormControl('', Validators.required),
-      eventDate : new FormControl('', Validators.required)
+      startDate : new FormControl('', Validators.required),
+      endDate: new FormControl('', Validators.required)
     })
   }
 
